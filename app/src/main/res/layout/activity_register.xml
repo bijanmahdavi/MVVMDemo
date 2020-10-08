@@ -1,0 +1,63 @@
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModelRegister"
+            type="ui.auth.AuthViewModelRegister" />
+    </data>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Register"
+        android:textSize="32dp" />
+
+    <EditText
+        android:text="@={viewModelRegister.name}"
+        android:id="@+id/edit_text_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Name" />
+
+
+    <EditText
+        android:text="@={viewModelRegister.email}"
+        android:id="@+id/edit_text_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Email" />
+
+    <EditText
+        android:text="@={viewModelRegister.password}"
+        android:id="@+id/edit_text_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Password" />
+
+    <EditText
+        android:text="@={viewModelRegister.type}"
+        android:id="@+id/edit_text_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="landlord/tenant" />
+
+    <Button
+        android:onClick="@{viewModelRegister::onRegisterButtonClick}"
+        android:id="@+id/button_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register" />
+
+
+</LinearLayout>
+
+</layout>
